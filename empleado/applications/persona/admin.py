@@ -2,7 +2,19 @@ from django.contrib import admin
 from .models import Empleado, Habilidades
 
 # Register your models here.
-from .models import Empleado
-admin.site.register(Empleado)
+admin.site.register(Habilidades)
 
-admin.site.register(Habilidades) 
+class EmpleadoAdmin(admin.ModelAdmin):
+    list_display = (
+
+        'first_name',
+        'last_name',
+        'departamento',
+        'job'
+
+
+    )
+
+
+
+admin.site.register(Empleado, EmpleadoAdmin) 
