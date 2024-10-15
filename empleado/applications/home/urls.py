@@ -5,5 +5,6 @@ urlpatterns = [
    
     path('home/', views.IndexView.as_view()),
     path('lista/',views.PruebaListView.as_view()),
+    path('lista-prueba/',views.ModeloPruebaList.as_view()),
 ]
     
